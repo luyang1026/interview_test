@@ -1,0 +1,5 @@
+{
+  "name": "Copy of Identity Verification Flow",
+  "description": "A multi-step user information collection and identity verification form featuring personal details entry and SMS OTP validation.",
+  "requestFramePermissions": []
+}
