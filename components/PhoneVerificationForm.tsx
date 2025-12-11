@@ -62,6 +62,7 @@ const PhoneVerificationForm: React.FC<PhoneVerificationFormProps> = ({
     }
 
     // Simulate validation
+    
     if (formData.verificationCode === '123456') {
       onComplete();
     } else {
@@ -104,9 +105,10 @@ const PhoneVerificationForm: React.FC<PhoneVerificationFormProps> = ({
           <div className="flex gap-3">
             <input
               type="text"
+              style={{width: '60%'}}
               value={formData.verificationCode}
               onChange={(e) => updateFormData({ verificationCode: e.target.value })}
-              className={`flex-1 px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors outline-none ${
+              className={`flex-2 px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors outline-none ${
                 error ? 'border-red-500 bg-red-50' : 'border-gray-300'
               }`}
               placeholder="6位数字验证码"
@@ -114,9 +116,10 @@ const PhoneVerificationForm: React.FC<PhoneVerificationFormProps> = ({
             />
             <button
               type="button"
+              style={{flex: 1}}
               onClick={handleSendCode}
               disabled={countdown > 0 || isSending}
-              className={`w-32 flex-shrink-0 font-medium text-sm rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 ${
+              className={`flex-1 font-small text-sm rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 ${
                 countdown > 0 || isSending
                   ? 'bg-gray-100 text-gray-400 cursor-not-allowed border border-gray-200'
                   : 'bg-white text-blue-600 border border-blue-600 hover:bg-blue-50'
@@ -128,7 +131,7 @@ const PhoneVerificationForm: React.FC<PhoneVerificationFormProps> = ({
           {error && <p className="mt-1 text-xs text-red-500">{error}</p>}
         </div>
 
-        <div className="pt-6 flex gap-4">
+        <div className="pt-4 flex gap-4" stype={{font: '12px'}}>
           <button
             type="button"
             onClick={onBack}
