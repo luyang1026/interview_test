@@ -59,7 +59,7 @@ const StepIndicator: React.FC<StepIndicatorProps> = ({ currentStep }) => {
                   )}
                 </div>
                 <div
-                  className={`absolute top-full mt-2 w-32 text-center text-xs font-medium ${
+                  className={`absolute top-full mt-2 w-14 text-center text-xs font-medium ${
                     isActive || isCompleted ? 'text-blue-600' : 'text-gray-500'
                   }`}
                 >
